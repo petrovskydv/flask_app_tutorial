@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "description": "Vlad Romaniuk",
-    "version": "1.0.0",
+    "description": "Petrovsky Denis",
+    "version": "1.0.1",
     "title": "Flask Swagger UI Tutorial",
     "contact": {
-      "email": "romanuk_vlad@ukr.net"
+      "email": "petrovsky.dv@gmail.com"
     },
     "license": {
       "name": "MIT",
