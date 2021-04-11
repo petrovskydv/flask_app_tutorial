@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 api = Api(app)
 
-SWAGGER_URL = '/swagger'
+SWAGGER_URL = '/doc'
 API_URL = '/static/swagger.json'
 SWAGGER_BLUEPRINT = get_swaggerui_blueprint(
     SWAGGER_URL,

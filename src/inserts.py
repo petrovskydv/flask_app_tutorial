@@ -1,7 +1,7 @@
 from datetime import date
 
 from src import db
-from src.models import Film
+from src.models import Film, Actor
 
 
 def populate_films():
@@ -83,7 +83,14 @@ def populate_films():
     db.session.close()
 
 
+def populate_actors():
+    actor = Actor(name='Denis')
+    db.session.add(actor)
+    db.session.commit()
+    db.session.close()
+
+
 if __name__ == '__main__':
     print('Populating db...')
-    populate_films()
+    populate_actors()
     print('Successfully populated!')
