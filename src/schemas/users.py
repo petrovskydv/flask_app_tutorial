@@ -4,5 +4,8 @@ from src.database.models import User
 
 
 class UserSchema(SQLAlchemyAutoSchema):
-    model = User
-    load_instance = True
+    class Meta:
+        model = User
+        load_instance = True
+        exclude = ('id', 'is_admin')
+        load_only = ('password',)

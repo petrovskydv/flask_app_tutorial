@@ -1,5 +1,7 @@
 import uuid
 
+from werkzeug.security import generate_password_hash
+
 from src import db
 
 movies_actors = db.Table(
@@ -63,3 +65,10 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User({self.username}, {self.email})'
+
+    def __init__(self, username, email, password, is_admin=False):
+        self.username = username
+        self.email = email
+        self.password = generate_password_hash(password)
+        self.is_admin = is_admin
+        self.uuid = str(uuid.uuid4())

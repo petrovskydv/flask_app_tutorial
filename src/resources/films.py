@@ -6,12 +6,14 @@ from marshmallow import ValidationError
 
 from src import db
 from src.database.models import Film
+from src.resources.auth import token_required
 from src.schemas.films import FilmSchema
 
 
 class FilmListApi(Resource):
     film_schema = FilmSchema()
 
+    @token_required
     def get(self, uuid=None):
         if not uuid:
             films = db.session.query(Film).all()
