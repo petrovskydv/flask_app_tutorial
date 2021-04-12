@@ -1,6 +1,6 @@
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 
-from src.models import Film, Actor
+from src.database.models import Film
 
 
 class FilmSchema(SQLAlchemyAutoSchema):
@@ -8,8 +8,3 @@ class FilmSchema(SQLAlchemyAutoSchema):
         model = Film
         exclude = ['id']
         load_instance = True
-
-
-class ActorSchema(SQLAlchemyAutoSchema):
-    model = Actor
-    load_instance = True
