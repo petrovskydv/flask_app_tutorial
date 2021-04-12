@@ -4,3 +4,4 @@ flask_restful~=0.3.8
 flask_sqlalchemy~=2.5.1
 flask_swagger_ui~=3.36.0
 marshmallow-sqlalchemy~=0.24.2
+pyjwt~=2.0.1
