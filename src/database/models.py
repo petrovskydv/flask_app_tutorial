@@ -72,3 +72,11 @@ class User(db.Model):
         self.password = generate_password_hash(password)
         self.is_admin = is_admin
         self.uuid = str(uuid.uuid4())
+
+    @classmethod
+    def find_user_by_username(cls, username):
+        return cls.query.filter_by(username=username).first()
+
+    @classmethod
+    def find_user_by_uuid(cls, uuid):
+        return cls.query.filter_by(uuid=uuid).first()
