@@ -4,6 +4,7 @@ python:
 
 before_install:
   - pip install pycodestyle
+  - pip install coverage
 
 install:
   - pip install -r requirements.txt
